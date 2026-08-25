@@ -57,7 +57,7 @@ export default function About() {
           </h2>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-8 items-start">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}

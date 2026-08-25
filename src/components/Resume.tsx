@@ -53,7 +53,7 @@ export default function Resume() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="resume" className="relative py-32 overflow-hidden">
+    <section id="resume" className="relative py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -96,7 +96,7 @@ export default function Resume() {
                         </h4>
                         <p className="text-sm text-accent-alt">{exp.company}</p>
                       </div>
-                      <span className="text-xs text-muted font-(family-name:--font-geist-mono)">
+                      <span className="text-sm text-muted font-(family-name:--font-geist-mono)">
                         {exp.period}
                       </span>
                     </div>
@@ -139,7 +139,7 @@ export default function Resume() {
                           {edu.institution}
                         </p>
                       </div>
-                      <span className="text-xs text-muted font-(family-name:--font-geist-mono)">
+                      <span className="text-sm text-muted font-(family-name:--font-geist-mono)">
                         {edu.period}
                       </span>
                     </div>

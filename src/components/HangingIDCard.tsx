@@ -46,9 +46,9 @@ function Scene() {
 
       <directionalLight position={[5, 8, 8]} intensity={3} color="#ffffff" />
 
-      <pointLight position={[-4, 3, 4]} intensity={25} color="#00f0ff" />
+      <pointLight position={[-4, 3, 4]} intensity={25} color="#38bdf8" />
 
-      <pointLight position={[4, -2, 3]} intensity={20} color="#a855f7" />
+      <pointLight position={[4, -2, 3]} intensity={20} color="#a78bfa" />
 
       <Physics gravity={[0, -18, 0]}>
         <LanyardSystem />
@@ -249,7 +249,7 @@ function LanyardLine({ fixed, joint1, joint2, joint3 }: LanyardLineProps) {
       new THREE.Line(
         new THREE.BufferGeometry(),
         new THREE.LineBasicMaterial({
-          color: "#00f0ff",
+          color: "#38bdf8",
           transparent: true,
           opacity: 0.9,
         }),
@@ -295,7 +295,7 @@ function IDCard() {
 
       <RoundedBox args={[3.5, 2.2, 0.12]} radius={0.12} smoothness={6}>
         <meshPhysicalMaterial
-          color="#07111f"
+          color="#1a1a1f"
           roughness={0.28}
           metalness={0.5}
           clearcoat={1}
@@ -311,7 +311,7 @@ function IDCard() {
         smoothness={6}
         position={[0, 0, 0.07]}
       >
-        <meshBasicMaterial color="#0b1526" />
+        <meshBasicMaterial color="#1e1e24" />
       </RoundedBox>
 
       {/* FRONT CONTENT */}
@@ -331,7 +331,7 @@ function CardContent() {
       <Text
         position={[-1.35, 0.75, 0]}
         fontSize={0.24}
-        color="#00f0ff"
+        color="#38bdf8"
         anchorX="left"
         anchorY="middle"
       >
@@ -343,7 +343,7 @@ function CardContent() {
       <mesh position={[-0.55, 0.55, 0]}>
         <planeGeometry args={[1.6, 0.025]} />
 
-        <meshBasicMaterial color="#00f0ff" />
+        <meshBasicMaterial color="#38bdf8" />
       </mesh>
 
       {/* PHOTO PLACEHOLDER */}
@@ -355,10 +355,10 @@ function CardContent() {
         position={[-1.05, 0.05, 0]}
       >
         <meshStandardMaterial
-          color="#111827"
+          color="#27272a"
           metalness={0.4}
           roughness={0.4}
-          emissive="#00f0ff"
+          emissive="#38bdf8"
           emissiveIntensity={0.05}
         />
       </RoundedBox>
@@ -366,7 +366,7 @@ function CardContent() {
       <Text
         position={[-1.05, 0.05, 0.03]}
         fontSize={0.09}
-        color="#00f0ff"
+        color="#38bdf8"
         anchorX="center"
         anchorY="middle"
       >
@@ -378,7 +378,7 @@ function CardContent() {
       <Text
         position={[0.1, 0.2, 0]}
         fontSize={0.19}
-        color="#f8fafc"
+        color="#f4f4f5"
         anchorX="left"
         anchorY="middle"
       >
@@ -390,7 +390,7 @@ function CardContent() {
       <Text
         position={[0.1, -0.1, 0]}
         fontSize={0.095}
-        color="#00f0ff"
+        color="#38bdf8"
         anchorX="left"
         anchorY="middle"
       >
@@ -400,7 +400,7 @@ function CardContent() {
       <Text
         position={[0.1, -0.3, 0]}
         fontSize={0.085}
-        color="#a855f7"
+        color="#a78bfa"
         anchorX="left"
         anchorY="middle"
       >
@@ -412,7 +412,7 @@ function CardContent() {
       <mesh position={[0, -0.65, 0]}>
         <planeGeometry args={[2.7, 0.01]} />
 
-        <meshBasicMaterial color="#334155" />
+        <meshBasicMaterial color="#3f3f46" />
       </mesh>
 
       {/* ID */}
@@ -420,7 +420,7 @@ function CardContent() {
       <Text
         position={[-1.35, -0.88, 0]}
         fontSize={0.075}
-        color="#64748b"
+        color="#71717a"
         anchorX="left"
         anchorY="middle"
       >
@@ -432,7 +432,7 @@ function CardContent() {
       <Text
         position={[1.35, -0.88, 0]}
         fontSize={0.065}
-        color="#00f0ff"
+        color="#38bdf8"
         anchorX="right"
         anchorY="middle"
       >
@@ -452,7 +452,7 @@ function CardClip() {
       <mesh>
         <cylinderGeometry args={[0.1, 0.1, 0.25, 16]} />
 
-        <meshStandardMaterial color="#cbd5e1" metalness={1} roughness={0.2} />
+        <meshStandardMaterial color="#a1a1aa" metalness={1} roughness={0.2} />
       </mesh>
 
       {/* METAL CLIP */}
@@ -463,7 +463,7 @@ function CardClip() {
         smoothness={4}
         position={[0, -0.18, 0]}
       >
-        <meshStandardMaterial color="#94a3b8" metalness={1} roughness={0.18} />
+        <meshStandardMaterial color="#71717a" metalness={1} roughness={0.18} />
       </RoundedBox>
 
       {/* METAL RING */}
@@ -471,7 +471,7 @@ function CardClip() {
       <mesh rotation={[Math.PI / 2, 0, 0]} position={[0, 0.18, 0]}>
         <torusGeometry args={[0.13, 0.025, 12, 24]} />
 
-        <meshStandardMaterial color="#e2e8f0" metalness={1} roughness={0.15} />
+        <meshStandardMaterial color="#e4e4e7" metalness={1} roughness={0.15} />
       </mesh>
     </group>
   );

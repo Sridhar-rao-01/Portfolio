@@ -8,9 +8,10 @@ const projects = [
     id: "hireiq",
     name: "HireIQ",
     tagline: "AI-Powered Resume Screening SaaS",
-    description: "An intelligent recruitment platform that uses Google Gemini AI to automate resume screening, score candidates, and generate interview questions.",
+    description:
+      "An intelligent recruitment platform that uses Google Gemini AI to automate resume screening, score candidates, and generate interview questions.",
     tech: ["Next.js 16", "Firebase", "Google Gemini AI", "Tailwind CSS"],
-    color: "#00f0ff",
+    color: "#38bdf8",
     icon: "🎯",
     features: [
       "AI-powered resume scoring with customizable criteria",
@@ -22,7 +23,11 @@ const projects = [
       "Multi-user team collaboration with role-based access",
     ],
     metrics: { score: "95%", time: "80%", accuracy: "92%" },
-    metricsLabels: { score: "Client Satisfaction", time: "Time Saved", accuracy: "Screening Accuracy" },
+    metricsLabels: {
+      score: "Client Satisfaction",
+      time: "Time Saved",
+      accuracy: "Screening Accuracy",
+    },
     code: `// HireIQ — AI Resume Screening
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
@@ -48,9 +53,10 @@ export async function scoreResume(resume, jobDescription) {
     id: "mediconsult",
     name: "MediConsult",
     tagline: "Clinic Management & Appointment SaaS",
-    description: "A comprehensive clinic management system that streamlines patient appointments, doctor scheduling, and medical record management.",
+    description:
+      "A comprehensive clinic management system that streamlines patient appointments, doctor scheduling, and medical record management.",
     tech: ["Python", "Flask", "SQLite", "HTML/CSS"],
-    color: "#39ff14",
+    color: "#4ade80",
     icon: "🏥",
     features: [
       "Patient registration and profile management",
@@ -62,7 +68,11 @@ export async function scoreResume(resume, jobDescription) {
       "Automated appointment reminders via email",
     ],
     metrics: { patients: "500+", appointments: "2000+", uptime: "99.9%" },
-    metricsLabels: { patients: "Patients Managed", appointments: "Appointments", uptime: "Uptime" },
+    metricsLabels: {
+      patients: "Patients Managed",
+      appointments: "Appointments",
+      uptime: "Uptime",
+    },
     code: `# MediConsult — Clinic Management
 from flask import Flask, render_template, request
 from flask_sqlalchemy import SQLAlchemy
@@ -95,9 +105,10 @@ def book_appointment():
     id: "cookhub",
     name: "CookHub",
     tagline: "Recipe Finder & Cooking Community",
-    description: "A vibrant cooking community platform where users discover recipes, share cooking tips, and connect with fellow food enthusiasts.",
+    description:
+      "A vibrant cooking community platform where users discover recipes, share cooking tips, and connect with fellow food enthusiasts.",
     tech: ["Python", "Flask", "Firebase", "JavaScript"],
-    color: "#a855f7",
+    color: "#a78bfa",
     icon: "🍳",
     features: [
       "Smart recipe search with ingredient-based filtering",
@@ -109,7 +120,11 @@ def book_appointment():
       "Responsive mobile-first design",
     ],
     metrics: { recipes: "1000+", users: "300+", rating: "4.8" },
-    metricsLabels: { recipes: "Recipes", users: "Active Users", rating: "App Rating" },
+    metricsLabels: {
+      recipes: "Recipes",
+      users: "Active Users",
+      rating: "App Rating",
+    },
     code: `# CookHub — Recipe Platform
 from flask import Flask, jsonify, request
 import firebase_admin
@@ -177,14 +192,23 @@ function TerminalCard({
         <div className="flex items-start justify-between mb-4">
           <div>
             <span className="text-3xl">{project.icon}</span>
-            <h3 className="text-xl font-bold text-foreground mt-2">{project.name}</h3>
+            <h3 className="text-xl font-bold text-foreground mt-2">
+              {project.name}
+            </h3>
             <p className="text-sm text-muted mt-1">{project.tagline}</p>
           </div>
           <motion.div
             animate={{ rotate: isHovered ? 45 : 0 }}
             className="text-accent"
           >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
               <path d="M7 17L17 7M17 7H7M17 7v10" />
             </svg>
           </motion.div>
@@ -254,7 +278,14 @@ function ProjectModal({
             onClick={onClose}
             className="ml-auto text-muted hover:text-foreground transition-colors"
           >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+            >
               <path d="M18 6L6 18M6 6l12 12" />
             </svg>
           </button>
@@ -264,19 +295,28 @@ function ProjectModal({
           <div className="flex items-center gap-4 mb-6">
             <span className="text-5xl">{project.icon}</span>
             <div>
-              <h3 className="text-3xl font-bold text-foreground">{project.name}</h3>
+              <h3 className="text-3xl font-bold text-foreground">
+                {project.name}
+              </h3>
               <p className="text-muted mt-1">{project.tagline}</p>
             </div>
           </div>
 
           <div className="grid grid-cols-3 gap-4 mb-8">
             {Object.entries(project.metrics).map(([key, value]) => (
-              <div key={key} className="p-4 rounded-lg border border-border bg-surface/50 text-center">
+              <div
+                key={key}
+                className="p-4 rounded-lg border border-border bg-surface/50 text-center"
+              >
                 <p className="text-2xl font-bold text-accent font-(family-name:--font-geist-mono)">
                   {value}
                 </p>
                 <p className="text-xs text-muted mt-1">
-                  {project.metricsLabels[key as keyof typeof project.metricsLabels]}
+                  {
+                    project.metricsLabels[
+                      key as keyof typeof project.metricsLabels
+                    ]
+                  }
                 </p>
               </div>
             ))}
@@ -295,7 +335,10 @@ function ProjectModal({
             </h4>
             <div className="grid sm:grid-cols-2 gap-2">
               {project.features.map((f) => (
-                <div key={f} className="flex items-start gap-2 text-sm text-muted">
+                <div
+                  key={f}
+                  className="flex items-start gap-2 text-sm text-muted"
+                >
                   <span className="text-neon-green mt-0.5">✓</span>
                   {f}
                 </div>
@@ -344,12 +387,14 @@ function ProjectModal({
 }
 
 export default function Projects() {
-  const [selectedProject, setSelectedProject] = useState<(typeof projects)[0] | null>(null);
+  const [selectedProject, setSelectedProject] = useState<
+    (typeof projects)[0] | null
+  >(null);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="projects" className="relative py-32 overflow-hidden">
+    <section id="projects" className="relative py-8 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -364,11 +409,11 @@ export default function Projects() {
             </span>
           </div>
           <h2 className="section-heading text-foreground">
-            Featured{" "}
-            <span className="text-accent glow-text">Projects</span>
+            Featured <span className="text-accent glow-text">Projects</span>
           </h2>
           <p className="mt-4 text-muted max-w-2xl">
-            Production-ready applications that solve real problems. Click any project to explore the case study.
+            Production-ready applications that solve real problems. Click any
+            project to explore the case study.
           </p>
         </motion.div>
 

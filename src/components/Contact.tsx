@@ -99,7 +99,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="relative py-32 overflow-hidden">
+    <section id="contact" className="relative py-8 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -165,7 +165,7 @@ export default function Contact() {
                         setTimeout(() => setIsTyping(false), 100);
                       }
                     }}
-                    placeholder="Type a command..."
+                    placeholder='Type "help" for commands'
                     className="flex-1 bg-transparent text-foreground text-sm font-(family-name:--font-geist-mono) outline-none placeholder:text-muted/50"
                     disabled={isTyping}
                   />

@@ -50,7 +50,7 @@ function FloatingSkill({
         <mesh>
           <boxGeometry args={[1.2, 0.6, 0.08]} />
           <meshStandardMaterial
-            color="#0a0f1a"
+            color="#18181b"
             metalness={0.8}
             roughness={0.2}
             emissive={color}
@@ -98,8 +98,8 @@ function SkillsScene() {
   return (
     <>
       <ambientLight intensity={0.4} />
-      <directionalLight position={[5, 5, 5]} intensity={0.8} color="#00f0ff" />
-      <pointLight position={[-5, 3, 5]} intensity={0.4} color="#a855f7" />
+      <directionalLight position={[5, 5, 5]} intensity={0.8} color="#38bdf8" />
+      <pointLight position={[-5, 3, 5]} intensity={0.4} color="#a78bfa" />
       {skills.map((skill, i) => (
         <FloatingSkill
           key={skill.name}
@@ -140,7 +140,7 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="relative pt-12 pb-32 overflow-hidden">
+    <section id="skills" className="relative pt-12 pb-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -164,12 +164,12 @@ export default function Skills() {
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
+        <div className="grid lg:grid-cols-5 gap-12 items-start">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="h-112.5 rounded-2xl border border-border overflow-hidden bg-surface/30"
+            className="lg:col-span-2 h-112.5 rounded-2xl border border-border overflow-hidden bg-surface/30"
           >
             <Suspense
               fallback={
@@ -190,7 +190,7 @@ export default function Skills() {
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="space-y-8"
+            className="lg:col-span-3 space-y-8"
           >
             {categories.map((cat, ci) => (
               <motion.div

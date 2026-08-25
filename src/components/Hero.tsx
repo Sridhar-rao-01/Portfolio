@@ -74,9 +74,9 @@ export default function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 2.6, duration: 0.8, ease: "easeOut" }}
           >
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-accent/20 bg-accent/5 mb-6">
-              <span className="w-2 h-2 rounded-full bg-neon-green animate-pulse-glow" />
-              <span className="text-xs text-accent font-(family-name:--font-geist-mono)">
+            <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full border border-accent/30 bg-accent/10 mb-6">
+              <span className="w-2.5 h-2.5 rounded-full bg-neon-green animate-pulse-glow" />
+              <span className="text-sm text-accent font-semibold font-(family-name:--font-geist-mono)">
                 Available for opportunities
               </span>
             </div>
