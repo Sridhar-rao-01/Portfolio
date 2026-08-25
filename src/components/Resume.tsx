@@ -243,12 +243,12 @@ export default function Resume() {
             </motion.div>
 
             <motion.a
-              href="#"
+              href="Doc\S_SRIDHAR_RAO_Resume_2026.pdf"
               initial={{ opacity: 0, y: 20 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.7 }}
               whileHover={{ scale: 1.02 }}
-              className="block p-6 rounded-xl border border-accent/30 bg-accent/5 text-center hover:bg-accent/10 transition-all group"
+              className="block p-8 rounded-xl border border-accent/30 bg-accent/5 text-center hover:bg-accent/10 transition-all group"
             >
               <span className="text-accent font-(family-name:--font-geist-mono) text-sm">
                 ↓ Download Full Resume

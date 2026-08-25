@@ -114,11 +114,11 @@ export default function About() {
             <div className="mt-8 grid grid-cols-2 gap-4">
               {[
                 { icon: "🎓", label: "Education", value: "BCA" },
-                { icon: "📍", label: "Location", value: "India" },
+                { icon: "📍", label: "Location", value: "Kharagpur" },
                 {
                   icon: "💼",
                   label: "Focus",
-                  value: "Web Development + DevOps",
+                  value: "Web Development & Gaming",
                 },
                 { icon: "🚀", label: "Status", value: "Open to Work" },
               ].map((item) => (
