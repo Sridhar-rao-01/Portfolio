@@ -394,7 +394,7 @@ function CardContent() {
         anchorX="left"
         anchorY="middle"
       >
-        FULL STACK DEVELOPER
+        WEB DEVELOPER
       </Text>
 
       <Text
@@ -404,7 +404,7 @@ function CardContent() {
         anchorX="left"
         anchorY="middle"
       >
-        DEVOPS ENGINEER
+        Cheers Digitals
       </Text>
 
       {/* BOTTOM LINE */}

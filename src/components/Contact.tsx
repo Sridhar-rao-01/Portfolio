@@ -201,20 +201,20 @@ export default function Contact() {
                 {
                   icon: "📧",
                   label: "Email",
-                  value: "sridhar@hackbits.dev",
-                  href: "mailto:sridhar@hackbits.dev",
+                  value: "sridharrao764@gmail.com",
+                  href: "mailto:sridharrao764@gmail.com",
                 },
                 {
                   icon: "💼",
                   label: "LinkedIn",
-                  value: "linkedin.com/in/sridhar-rao",
-                  href: "#",
+                  value: "linkedin.com/in/s-sridhar-rao-857359369",
+                  href: "https://www.linkedin.com/in/s-sridhar-rao-857359369",
                 },
                 {
                   icon: "🐙",
                   label: "GitHub",
                   value: "github.com/hackbits",
-                  href: "#",
+                  href: "https://github.com/hackbits",
                 },
                 {
                   icon: "🐦",
