@@ -1,10 +1,8 @@
 "use client";
 
-import { useRef, Suspense } from "react";
+import Image from "next/image";
+import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { Float, Text } from "@react-three/drei";
-import * as THREE from "three";
 
 const skills = [
   { name: "Next.js", color: "#ffffff", category: "frontend" },
@@ -24,93 +22,6 @@ const skills = [
   { name: "GitHub", color: "#47a248", category: "devops" },
   { name: "Redis", color: "#dc382d", category: "database" },
 ];
-
-function FloatingSkill({
-  name,
-  color,
-  position,
-}: {
-  name: string;
-  color: string;
-  position: [number, number, number];
-}) {
-  const meshRef = useRef<THREE.Mesh>(null);
-
-  useFrame((state) => {
-    if (meshRef.current) {
-      meshRef.current.rotation.y = state.clock.elapsedTime * 0.3;
-      meshRef.current.position.y =
-        position[1] + Math.sin(state.clock.elapsedTime + position[0]) * 0.15;
-    }
-  });
-
-  return (
-    <Float speed={2} rotationIntensity={0.3} floatIntensity={0.4}>
-      <group ref={meshRef} position={position}>
-        <mesh>
-          <boxGeometry args={[1.2, 0.6, 0.08]} />
-          <meshStandardMaterial
-            color="#18181b"
-            metalness={0.8}
-            roughness={0.2}
-            emissive={color}
-            emissiveIntensity={0.15}
-          />
-        </mesh>
-        <mesh position={[0, 0, 0.05]}>
-          <boxGeometry args={[1.22, 0.62, 0.01]} />
-          <meshBasicMaterial color={color} transparent opacity={0.1} />
-        </mesh>
-        <Text
-          position={[0, 0, 0.06]}
-          fontSize={0.15}
-          color={color}
-          anchorX="center"
-          anchorY="middle"
-        >
-          {name}
-        </Text>
-      </group>
-    </Float>
-  );
-}
-
-function SkillsScene() {
-  const positions: [number, number, number][] = [
-    [-2.5, 1.5, 0],
-    [-0.8, 1.8, 0.5],
-    [0.9, 1.4, -0.3],
-    [2.5, 1.7, 0.2],
-    [-2.2, 0.3, 0.3],
-    [-0.5, 0.6, -0.2],
-    [1.2, 0.4, 0.4],
-    [2.8, 0.2, -0.1],
-    [-2.0, -1.0, -0.2],
-    [-0.3, -0.8, 0.3],
-    [1.5, -1.2, 0.1],
-    [2.6, -0.9, -0.3],
-    [-1.8, -2.2, 0.1],
-    [0.2, -2.0, -0.2],
-    [1.8, -2.4, 0.3],
-    [3.0, -2.1, 0],
-  ];
-
-  return (
-    <>
-      <ambientLight intensity={0.4} />
-      <directionalLight position={[5, 5, 5]} intensity={0.8} color="#38bdf8" />
-      <pointLight position={[-5, 3, 5]} intensity={0.4} color="#a78bfa" />
-      {skills.map((skill, i) => (
-        <FloatingSkill
-          key={skill.name}
-          name={skill.name}
-          color={skill.color}
-          position={positions[i]}
-        />
-      ))}
-    </>
-  );
-}
 
 export default function Skills() {
   const ref = useRef(null);
@@ -169,28 +80,22 @@ export default function Skills() {
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:col-span-2 h-112.5 rounded-2xl border border-border overflow-hidden bg-surface/30"
+            className="lg:col-span-2 h-full w-full rounded-2xl border border-border overflow-hidden bg-surface/30"
           >
-            <Suspense
-              fallback={
-                <div className="w-full h-full flex items-center justify-center">
-                  <div className="text-accent font-(family-name:--font-geist-mono) text-sm animate-pulse-glow">
-                    Loading 3D Skills...
-                  </div>
-                </div>
-              }
-            >
-              <Canvas camera={{ position: [0, 0, 5], fov: 50 }}>
-                <SkillsScene />
-              </Canvas>
-            </Suspense>
+            <Image
+              src="/images/Portfolio_Techstack.png"
+              alt="Skills and Technologies"
+              width={1200}
+              height={900}
+              className="w-full h-full object-contain"
+            />
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="lg:col-span-3 space-y-8"
+            className="lg:col-span-3 space-y-20"
           >
             {categories.map((cat, ci) => (
               <motion.div
