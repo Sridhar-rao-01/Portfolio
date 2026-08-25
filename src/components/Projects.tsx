@@ -168,7 +168,7 @@ function TerminalCard({
         <div className="terminal-dot bg-red-500" />
         <div className="terminal-dot bg-yellow-500" />
         <div className="terminal-dot bg-green-500" />
-        <span className="ml-3 text-xs text-muted font-[family-name:var(--font-geist-mono)]">
+        <span className="ml-3 text-xs text-muted font-(family-name:--font-geist-mono)">
           ~/projects/{project.id}
         </span>
       </div>
@@ -198,14 +198,14 @@ function TerminalCard({
           {project.tech.map((t) => (
             <span
               key={t}
-              className="text-[10px] px-2 py-1 rounded border border-border text-muted font-[family-name:var(--font-geist-mono)]"
+              className="text-xs px-2 py-1 rounded border border-border text-muted font-(family-name:--font-geist-mono)"
             >
               {t}
             </span>
           ))}
         </div>
 
-        <div className="flex items-center gap-2 text-accent text-xs font-[family-name:var(--font-geist-mono)]">
+        <div className="flex items-center gap-2 text-accent text-xs font-(family-name:--font-geist-mono)">
           <span className="text-muted">$</span>
           <span>cat {project.id.toLowerCase()}.details</span>
           <motion.span
@@ -232,7 +232,7 @@ function ProjectModal({
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="fixed inset-0 z-[80] flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
+      className="fixed inset-0 z-80 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm"
       onClick={onClose}
     >
       <motion.div
@@ -247,7 +247,7 @@ function ProjectModal({
           <div className="terminal-dot bg-red-500" />
           <div className="terminal-dot bg-yellow-500" />
           <div className="terminal-dot bg-green-500" />
-          <span className="ml-3 text-xs text-muted font-[family-name:var(--font-geist-mono)]">
+          <span className="ml-3 text-xs text-muted font-(family-name:--font-geist-mono)">
             ~/projects/{project.id}/CASE_STUDY.md
           </span>
           <button
@@ -272,7 +272,7 @@ function ProjectModal({
           <div className="grid grid-cols-3 gap-4 mb-8">
             {Object.entries(project.metrics).map(([key, value]) => (
               <div key={key} className="p-4 rounded-lg border border-border bg-surface/50 text-center">
-                <p className="text-2xl font-bold text-accent font-[family-name:var(--font-geist-mono)]">
+                <p className="text-2xl font-bold text-accent font-(family-name:--font-geist-mono)">
                   {value}
                 </p>
                 <p className="text-xs text-muted mt-1">
@@ -283,14 +283,14 @@ function ProjectModal({
           </div>
 
           <div className="mb-8">
-            <h4 className="text-sm font-[family-name:var(--font-geist-mono)] text-accent mb-3 tracking-wider uppercase">
+            <h4 className="text-sm font-(family-name:--font-geist-mono) text-accent mb-3 tracking-wider">
               Description
             </h4>
             <p className="text-muted leading-relaxed">{project.description}</p>
           </div>
 
           <div className="mb-8">
-            <h4 className="text-sm font-[family-name:var(--font-geist-mono)] text-accent mb-3 tracking-wider uppercase">
+            <h4 className="text-sm font-(family-name:--font-geist-mono) text-accent mb-3 tracking-wider uppercase">
               Key Features
             </h4>
             <div className="grid sm:grid-cols-2 gap-2">
@@ -304,14 +304,14 @@ function ProjectModal({
           </div>
 
           <div className="mb-8">
-            <h4 className="text-sm font-[family-name:var(--font-geist-mono)] text-accent mb-3 tracking-wider uppercase">
+            <h4 className="text-sm font-(family-name:--font-geist-mono) text-accent mb-3 tracking-wider">
               Tech Stack
             </h4>
             <div className="flex flex-wrap gap-2">
               {project.tech.map((t) => (
                 <span
                   key={t}
-                  className="text-xs px-3 py-1.5 rounded-lg border border-border bg-surface/50 text-foreground font-[family-name:var(--font-geist-mono)]"
+                  className="text-xs px-3 py-1.5 rounded-lg border border-border bg-surface/50 text-foreground font-(family-name:--font-geist-mono)"
                 >
                   {t}
                 </span>
@@ -320,7 +320,7 @@ function ProjectModal({
           </div>
 
           <div>
-            <h4 className="text-sm font-[family-name:var(--font-geist-mono)] text-accent mb-3 tracking-wider uppercase">
+            <h4 className="text-sm font-(family-name:--font-geist-mono) text-accent mb-3 tracking-wider">
               Code Snippet
             </h4>
             <div className="terminal-window rounded-lg overflow-hidden">
@@ -328,11 +328,11 @@ function ProjectModal({
                 <div className="terminal-dot bg-red-500" />
                 <div className="terminal-dot bg-yellow-500" />
                 <div className="terminal-dot bg-green-500" />
-                <span className="ml-3 text-[10px] text-muted font-[family-name:var(--font-geist-mono)]">
+                <span className="ml-3 text-xs text-muted font-(family-name:--font-geist-mono)">
                   {project.id}.{project.tech.includes("Python") ? "py" : "ts"}
                 </span>
               </div>
-              <pre className="p-4 text-xs text-muted overflow-x-auto font-[family-name:var(--font-geist-mono)] leading-relaxed">
+              <pre className="p-4 text-xs text-muted overflow-x-auto font-(family-name:--font-geist-mono) leading-relaxed">
                 <code>{project.code}</code>
               </pre>
             </div>
@@ -358,8 +358,8 @@ export default function Projects() {
           className="mb-16"
         >
           <div className="flex items-center gap-3 mb-4">
-            <div className="h-px flex-1 max-w-[60px] bg-accent/40" />
-            <span className="text-xs text-accent font-[family-name:var(--font-geist-mono)] tracking-widest uppercase">
+            <div className="h-px flex-1 max-w-15 bg-accent/40" />
+            <span className="text-xs text-accent font-(family-name:--font-geist-mono) tracking-widest uppercase">
               Portfolio
             </span>
           </div>

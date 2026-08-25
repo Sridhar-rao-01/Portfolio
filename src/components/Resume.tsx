@@ -147,7 +147,7 @@ export default function Resume() {
                       {edu.highlights.map((h) => (
                         <span
                           key={h}
-                          className="text-[10px] px-2 py-1 rounded border border-border text-muted"
+                          className="text-xs px-2 py-1 rounded border border-border text-muted"
                         >
                           {h}
                         </span>
@@ -165,7 +165,7 @@ export default function Resume() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.3 }}
             >
-              <h3 className="text-sm font-(family-name:--font-geist-mono) text-accent tracking-wider uppercase mb-6 flex items-center gap-2">
+              <h3 className="text-sm font-(family-name:--font-geist-mono) text-accent tracking-wider mb-6 flex items-center gap-2">
                 <span className="text-accent">03.</span> Technical Skills
               </h3>
               <div className="terminal-window glow-box">
@@ -207,7 +207,7 @@ export default function Resume() {
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: 0.5 }}
             >
-              <h3 className="text-sm font-(family-name:--font-geist-mono) text-accent tracking-wider uppercase mb-6 flex items-center gap-2">
+              <h3 className="text-sm font-(family-name:--font-geist-mono) text-accent tracking-wider mb-6 flex items-center gap-2">
                 <span className="text-accent">04.</span> Certifications
               </h3>
               <div className="space-y-3">

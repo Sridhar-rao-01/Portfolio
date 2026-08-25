@@ -45,39 +45,39 @@ export default function Contact() {
         "  contact   — Get contact information",
         "  social    — Show social media links",
         "  clear     — Clear the terminal",
-        "  exit      — Close terminal session"
+        "  exit      — Close terminal session",
       );
     } else if (trimmed === "about") {
       newLines.push(
         "S Sridhar Rao — HACKBITS",
         "Creative Full Stack Developer → DevOps Engineer",
         "Building at the intersection of code and infrastructure.",
-        "Currently focused on Docker, Kubernetes, and CI/CD pipelines."
+        "Currently focused on Docker, Kubernetes, and CI/CD pipelines.",
       );
     } else if (trimmed === "skills") {
       newLines.push(
         "Frontend: Next.js, React, TypeScript, Tailwind CSS",
         "Backend: Python, Flask, Node.js, Firebase",
         "DevOps: Docker, Kubernetes, GitHub Actions, AWS",
-        "Tools: Git, VS Code, Figma, PostgreSQL, MongoDB"
+        "Tools: Git, VS Code, Figma, PostgreSQL, MongoDB",
       );
     } else if (trimmed === "projects") {
       newLines.push(
         "1. HireIQ — AI-Powered Resume Screening SaaS",
         "2. MediConsult — Clinic Management & Appointment SaaS",
-        "3. CookHub — Recipe Finder & Cooking Community"
+        "3. CookHub — Recipe Finder & Cooking Community",
       );
     } else if (trimmed === "contact") {
       newLines.push(
         "Email: sridhar@hackbits.dev",
         "Location: India",
-        "Status: Open to opportunities"
+        "Status: Open to opportunities",
       );
     } else if (trimmed === "social") {
       newLines.push(
         "GitHub: github.com/hackbits",
         "LinkedIn: linkedin.com/in/sridhar-rao",
-        "Twitter: @hackbits_dev"
+        "Twitter: @hackbits_dev",
       );
     } else if (trimmed === "clear") {
       setTerminalLines([]);
@@ -89,7 +89,9 @@ export default function Contact() {
       setCurrentInput("");
       return;
     } else if (trimmed) {
-      newLines.push(`Command not found: ${cmd}. Type 'help' for available commands.`);
+      newLines.push(
+        `Command not found: ${cmd}. Type 'help' for available commands.`,
+      );
     }
 
     setTerminalLines(newLines);
@@ -106,17 +108,17 @@ export default function Contact() {
           className="mb-16"
         >
           <div className="flex items-center gap-3 mb-4">
-            <div className="h-px flex-1 max-w-[60px] bg-accent/40" />
-            <span className="text-xs text-accent font-[family-name:var(--font-geist-mono)] tracking-widest uppercase">
+            <div className="h-px flex-1 max-w-15 bg-accent/40" />
+            <span className="text-xs text-accent font-(family-name:--font-geist-mono) tracking-widest uppercase">
               Get in Touch
             </span>
           </div>
           <h2 className="section-heading text-foreground">
-            Contact{" "}
-            <span className="text-accent glow-text">Terminal</span>
+            Contact <span className="text-accent glow-text">Terminal</span>
           </h2>
           <p className="mt-4 text-muted max-w-2xl">
-            Drop a message through the terminal or reach out directly. I&apos;m always open to discussing new projects and opportunities.
+            Drop a message through the terminal or reach out directly. I&apos;m
+            always open to discussing new projects and opportunities.
           </p>
         </motion.div>
 
@@ -126,19 +128,22 @@ export default function Contact() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="terminal-window glow-box h-[480px] flex flex-col">
+            <div className="terminal-window glow-box h-120 flex flex-col">
               <div className="terminal-header">
                 <div className="terminal-dot bg-red-500" />
                 <div className="terminal-dot bg-yellow-500" />
                 <div className="terminal-dot bg-green-500" />
-                <span className="ml-3 text-xs text-muted font-[family-name:var(--font-geist-mono)]">
+                <span className="ml-3 text-xs text-muted font-(family-name:--font-geist-mono)">
                   hackbits@portfolio:~/contact
                 </span>
               </div>
 
-              <div className="flex-1 p-4 overflow-y-auto font-[family-name:var(--font-geist-mono)] text-sm">
+              <div className="flex-1 p-4 overflow-y-auto font-(family-name:--font-geist-mono) text-sm">
                 {terminalLines.map((line, i) => (
-                  <div key={i} className={`py-0.5 ${line.startsWith(">") ? "text-neon-green" : "text-muted"}`}>
+                  <div
+                    key={i}
+                    className={`py-0.5 ${line?.startsWith?.(">") ? "text-neon-green" : "text-muted"}`}
+                  >
                     {line}
                   </div>
                 ))}
@@ -146,7 +151,7 @@ export default function Contact() {
 
               <div className="p-4 border-t border-border">
                 <div className="flex items-center gap-2">
-                  <span className="text-accent text-sm font-[family-name:var(--font-geist-mono)]">
+                  <span className="text-accent text-sm font-(family-name:--font-geist-mono)">
                     $
                   </span>
                   <input
@@ -161,7 +166,7 @@ export default function Contact() {
                       }
                     }}
                     placeholder="Type a command..."
-                    className="flex-1 bg-transparent text-foreground text-sm font-[family-name:var(--font-geist-mono)] outline-none placeholder:text-muted/50"
+                    className="flex-1 bg-transparent text-foreground text-sm font-(family-name:--font-geist-mono) outline-none placeholder:text-muted/50"
                     disabled={isTyping}
                   />
                   <motion.span
@@ -185,9 +190,9 @@ export default function Contact() {
                 Let&apos;s Build Something Great
               </h3>
               <p className="text-muted text-sm leading-relaxed">
-                Whether you have a project in mind, want to collaborate on open source,
-                or just want to say hi — my inbox is always open. I typically respond
-                within 24 hours.
+                Whether you have a project in mind, want to collaborate on open
+                source, or just want to say hi — my inbox is always open. I
+                typically respond within 24 hours.
               </p>
             </div>
 
@@ -238,7 +243,11 @@ export default function Contact() {
                     stroke="currentColor"
                     strokeWidth={2}
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
                   </svg>
                 </motion.a>
               ))}
@@ -247,11 +256,14 @@ export default function Contact() {
             <div className="p-6 rounded-xl border border-border bg-surface/30">
               <div className="flex items-center gap-2 mb-3">
                 <span className="w-2 h-2 rounded-full bg-neon-green animate-pulse-glow" />
-                <span className="text-sm text-foreground font-medium">Current Status</span>
+                <span className="text-sm text-foreground font-medium">
+                  Current Status
+                </span>
               </div>
               <p className="text-sm text-muted">
-                Open to full-time opportunities, freelance projects, and open source collaborations.
-                Particularly interested in DevOps and platform engineering roles.
+                Open to full-time opportunities, freelance projects, and open
+                source collaborations. Particularly interested in DevOps and
+                platform engineering roles.
               </p>
             </div>
           </motion.div>
