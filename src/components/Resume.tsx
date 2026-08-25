@@ -6,9 +6,25 @@ import { motion, useInView } from "framer-motion";
 const resumeData = {
   education: [
     {
-      degree: "B.Tech in Computer Science & Engineering",
-      institution: "RCM Group of Institutions",
-      period: "2022 — 2026",
+      degree: "Secondary Schoolling (10th Grade)",
+      institution: "Kendriya Vidyalaya No.1 AFS Kalaikunda, West Bengal, India",
+      period: "2019 — 2020",
+      highlights: ["Secured 74% in CBSE Board Exams"],
+    },
+    {
+      degree: "Senior Secondary Schoolling (12th Grade)",
+      institution: "Kendriya Vidyalaya No.1 AFS Kalaikunda, West Bengal, India",
+      period: "2021 — 2022",
+      highlights: [
+        "Secured 68% in CBSE Board Exams",
+        "Specialized in Science Stream with focus on Computer Science",
+      ],
+    },
+    {
+      degree: "Bachelor in Computer Applications (BCA)",
+      institution:
+        "Regional College of Management,  Bhubaneswar, Odisha, India",
+      period: "2023 — 2026",
       highlights: [
         "Full Stack Development",
         "DevOps Practices",
