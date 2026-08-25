@@ -94,7 +94,7 @@ export default function Hero() {
             </div>
 
             <p className="text-lg md:text-xl text-muted leading-relaxed mb-8 max-w-lg">
-              Creative <span className="text-accent">full stack developer</span>{" "}
+              Creative <span className="text-accent">Web developer</span>{" "}
               transitioning into{" "}
               <span className="text-accent-alt">DevOps engineering</span>.
               Building at the intersection of code and infrastructure.

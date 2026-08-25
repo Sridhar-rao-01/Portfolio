@@ -2,7 +2,7 @@
 
 import { Suspense, useEffect, useMemo, useRef, useState } from "react";
 import { Canvas, useFrame, ThreeEvent } from "@react-three/fiber";
-import { RoundedBox, Text } from "@react-three/drei";
+import { RoundedBox, Text, useTexture } from "@react-three/drei";
 import {
   BallCollider,
   Physics,
@@ -346,32 +346,11 @@ function CardContent() {
         <meshBasicMaterial color="#38bdf8" />
       </mesh>
 
-      {/* PHOTO PLACEHOLDER */}
-
-      <RoundedBox
-        args={[0.75, 0.75, 0.03]}
-        radius={0.08}
-        smoothness={4}
-        position={[-1.05, 0.05, 0]}
-      >
-        <meshStandardMaterial
-          color="#27272a"
-          metalness={0.4}
-          roughness={0.4}
-          emissive="#38bdf8"
-          emissiveIntensity={0.05}
-        />
-      </RoundedBox>
-
-      <Text
-        position={[-1.05, 0.05, 0.03]}
-        fontSize={0.09}
-        color="#38bdf8"
-        anchorX="center"
-        anchorY="middle"
-      >
-        PHOTO
-      </Text>
+      {/* PROFILE PHOTO */}
+      <mesh position={[-1.05, 0.05, 0.03]}>
+        <planeGeometry args={[0.65, 0.65]} />
+        <meshBasicMaterial map={useTexture("/images/PIC.jpg")} transparent />
+      </mesh>
 
       {/* NAME */}
 
