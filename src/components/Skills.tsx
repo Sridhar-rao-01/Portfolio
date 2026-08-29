@@ -109,12 +109,12 @@ export default function Skills() {
                 >
                   {cat.label}
                 </h3>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-4">
                   {cat.skills.map((skill) => (
                     <motion.div
                       key={skill.name}
                       whileHover={{ scale: 1.05, y: -2 }}
-                      className="px-4 py-2 rounded-lg border border-border bg-surface/50 hover:border-accent/30 transition-all cursor-default"
+                      className="px-4 py-2 rounded-lg border border-border bg-surface/50 hover:border-[#b045f7] hover:scale-110 transition-all cursor-default"
                     >
                       <div className="flex items-center gap-2">
                         <div
