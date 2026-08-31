@@ -66,7 +66,7 @@ export default function LoadingScreen() {
                 <div className="terminal-dot bg-yellow-500" />
                 <div className="terminal-dot bg-green-500" />
                 <span className="ml-3 text-xs text-muted font-(family-name:--font-geist-mono)">
-                  hackbits@portfolio:~
+                  Hackbits@portfolio:~
                 </span>
               </div>
 
