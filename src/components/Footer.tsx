@@ -31,7 +31,7 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="flex justify-center gap-6">
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-6">
             {footerLinks.map((link) => (
               <a
                 key={link.href}

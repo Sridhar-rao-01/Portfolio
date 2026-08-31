@@ -91,7 +91,7 @@ export default function LearningJourney() {
         <div className="relative">
           <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-linear-to-b from-accent via-accent-alt to-neon-green opacity-30" />
 
-          <div className="space-y-16">
+          <div className="space-y-12 md:space-y-16">
             {roadmap.map((phase, i) => {
               const isLeft = i % 2 === 0;
               const statusColor =

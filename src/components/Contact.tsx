@@ -128,7 +128,7 @@ export default function Contact() {
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="terminal-window glow-box h-120 flex flex-col">
+            <div className="terminal-window glow-box h-64 sm:h-80 lg:h-120 flex flex-col">
               <div className="terminal-header">
                 <div className="terminal-dot bg-red-500" />
                 <div className="terminal-dot bg-yellow-500" />

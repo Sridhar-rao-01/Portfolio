@@ -111,7 +111,7 @@ export default function About() {
               </div>
             </div>
 
-            <div className="mt-8 grid grid-cols-2 gap-4">
+            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
               {[
                 { icon: "🎓", label: "Education", value: "BCA" },
                 { icon: "📍", label: "Location", value: "Kharagpur" },

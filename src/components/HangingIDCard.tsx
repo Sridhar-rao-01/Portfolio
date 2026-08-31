@@ -17,7 +17,7 @@ import * as THREE from "three";
 
 export default function HangingIDCard() {
   return (
-    <div className="relative w-full h-full min-h-125">
+    <div className="relative w-full h-full min-h-80">
       <Canvas
         camera={{
           position: [0, 0, 11],
@@ -28,6 +28,7 @@ export default function HangingIDCard() {
           antialias: true,
           alpha: true,
         }}
+        style={{ touchAction: 'none' }}
       >
         <Suspense fallback={null}>
           <Scene />

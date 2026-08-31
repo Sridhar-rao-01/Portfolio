@@ -163,3 +163,9 @@ body {
   mask-composite: exclude;
   pointer-events: none;
 }
+
+@media (hover: none) and (pointer: coarse) {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+}

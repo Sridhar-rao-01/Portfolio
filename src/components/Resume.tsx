@@ -105,7 +105,7 @@ export default function Resume() {
                     key={i}
                     className="p-6 rounded-xl border border-border bg-surface/30 hover:border-accent/20 transition-all"
                   >
-                    <div className="flex items-start justify-between mb-3">
+                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-3 gap-1 sm:gap-0">
                       <div>
                         <h4 className="font-semibold text-foreground">
                           {exp.role}
@@ -146,7 +146,7 @@ export default function Resume() {
                     key={i}
                     className="p-6 rounded-xl border border-border bg-surface/30"
                   >
-                    <div className="flex items-start justify-between mb-3">
+                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-3 gap-1 sm:gap-0">
                       <div>
                         <h4 className="font-semibold text-foreground">
                           {edu.degree}

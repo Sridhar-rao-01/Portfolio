@@ -81,14 +81,14 @@ export default function Hero() {
               </span>
             </div>
 
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight mb-4">
+            <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold tracking-tight mb-4">
               <span className="text-foreground">
                 <TypingAnimation />
               </span>
             </h1>
 
             <div className="flex items-center gap-3 mb-6">
-              <span className="text-xl md:text-2xl text-accent-alt font-(family-name:--font-geist-mono) glow-text-alt">
+              <span className="text-base sm:text-xl md:text-2xl text-accent-alt font-(family-name:--font-geist-mono) glow-text-alt">
                 {"{ HACKBITS }"}
               </span>
             </div>
@@ -135,7 +135,7 @@ export default function Hero() {
                 { label: "Years Coding", value: "3+" },
               ].map((stat) => (
                 <div key={stat.label}>
-                  <p className="text-2xl font-bold text-accent font-(family-name:--font-geist-mono)">
+                  <p className="text-xl sm:text-2xl font-bold text-accent font-(family-name:--font-geist-mono)">
                     {stat.value}
                   </p>
                   <p className="text-xs text-muted mt-1">{stat.label}</p>
@@ -152,7 +152,7 @@ export default function Hero() {
               duration: 0.8,
               ease: "easeOut",
             }}
-            className="h-125 lg:h-162.5 w-full"
+            className="h-80 sm:h-100 lg:h-125 w-full"
           >
             <HangingIDCard />
           </motion.div>
@@ -163,7 +163,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 3.5, duration: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 pt-4"
       >
         <a
           href="#about"

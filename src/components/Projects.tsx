@@ -302,7 +302,7 @@ function ProjectModal({
             </div>
           </div>
 
-          <div className="grid grid-cols-3 gap-4 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-8">
             {Object.entries(project.metrics).map(([key, value]) => (
               <div
                 key={key}

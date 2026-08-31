@@ -80,7 +80,7 @@ export default function Skills() {
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:col-span-2 h-full w-full rounded-2xl border border-border overflow-hidden bg-surface/30"
+            className="lg:col-span-2 h-full w-full max-h-64 sm:max-h-80 lg:max-h-none rounded-2xl border border-border overflow-hidden bg-surface/30"
           >
             <Image
               src="/images/Portfolio_Techstack.png"
@@ -95,7 +95,7 @@ export default function Skills() {
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4 }}
-            className="lg:col-span-3 space-y-20"
+            className="lg:col-span-3 space-y-12 sm:space-y-20"
           >
             {categories.map((cat, ci) => (
               <motion.div
