@@ -69,7 +69,7 @@ export default function Resume() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="resume" className="relative py-24 overflow-hidden">
+    <section id="resume" className="relative py-8 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}

@@ -51,7 +51,7 @@ export default function Skills() {
   ];
 
   return (
-    <section id="skills" className="relative pt-12 pb-24 overflow-hidden">
+    <section id="skills" className="relative pt-12 pb-16 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6" ref={ref}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
